@@ -5,7 +5,7 @@ import CloseIcon from '@mui/icons-material/Close';
 export default function Profile({ pokemon, name, id, close }: any) {
 
   return (
-    <div className="lg:w-3/5 w-4/5 min-w-[320px] max-h-[90vh] bg-slate-100 rounded-2xl outline-none flex flex-col overflow-y-auto">
+    <div className="lg:w-3/5 w-4/5 min-w-[320px] max-h-[90vh] bg-slate-100 rounded-2xl outline-none flex flex-col overflow-y-auto mx-11">
       <div className="w-full bg-red-500 rounded-t-2xl flex justify-evenly items-center p-3 mb-5 sticky top-0 z-10">
         <p
           className="text-gray-100 font-bold text-center capitalize"
