@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Type from "./type";
-import { Box, Modal, Typography } from "@mui/material";
+import { Modal } from "@mui/material";
 import Profile from "./profile";
 
 export default function Pokemon(pokemonProp: any) {

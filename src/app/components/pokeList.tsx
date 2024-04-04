@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Pokemon from "./pokemon";
@@ -6,8 +6,12 @@ import { IconButton } from "@mui/material";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 
+interface PokemonData {
+  name: string;
+}
+
 export default function PokemonList() {
-  const [pokemonList, setPokemonList] = useState([]);
+  const [pokemonList, setPokemonList] = useState<PokemonData[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
@@ -19,7 +23,11 @@ export default function PokemonList() {
             (currentPage - 1) * 36
           }&limit=36`
         );
-        setPokemonList(response.data.results);
+
+        // Type assertion to inform TypeScript about the shape of the data
+        const data = response.data as { results: PokemonData[] };
+
+        setPokemonList(data.results);
         setTotalPages(Math.ceil(response.data.count / 36));
 
         // Scroll to the top of the page
