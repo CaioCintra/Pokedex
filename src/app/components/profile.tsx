@@ -2,17 +2,17 @@ import Type from "./type";
 
 export default function Profile(info: any) {
   return (
-    <div className="lg:w-3/5 max-h-[90dvh] bg-slate-100 rounded-2xl outline-none flex flex-col overflow-y-auto">
+    <div className="lg:w-3/5 w-4/5 min-w-[320px] max-h-[90vh] bg-slate-100 rounded-2xl outline-none flex flex-col overflow-y-auto">
       <div className="w-full bg-red-500 rounded-t-2xl flex justify-evenly items-center p-3 mb-5 sticky top-0 z-10">
         <p
           className="text-gray-100 font-bold text-center capitalize"
-          style={{ fontSize: "calc(2dvw + 3dvh)" }}
+          style={{ fontSize: "calc(2vw + 3vh)" }}
         >
           {info.name}
         </p>
         <p
           className="text-zinc-900 font-bold text-center capitalize flex-shrink-0"
-          style={{ fontSize: "calc(2dvw + 3dvh)" }}
+          style={{ fontSize: "calc(2vw + 3vh)" }}
         >
           #{info.id}
         </p>
