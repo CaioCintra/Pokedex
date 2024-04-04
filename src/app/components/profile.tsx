@@ -1,9 +1,8 @@
 import { IconButton } from "@mui/material";
 import Type from "./type";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function Profile({ pokemon, name, id, close }: any) {
-
   return (
     <div className="lg:w-3/5 w-4/5 min-w-[320px] max-h-[90vh] bg-slate-100 rounded-2xl outline-none flex flex-col overflow-y-auto">
       <div className="w-full bg-red-500 rounded-t-2xl flex justify-evenly items-center p-3 mb-5 sticky top-0 z-10">
@@ -20,12 +19,12 @@ export default function Profile({ pokemon, name, id, close }: any) {
           #{id}
         </p>
         <IconButton
-            aria-label="back"
-            onClick={close}
-            className="text-slate-50"
-          >
-            <CloseIcon fontSize="large" />
-          </IconButton>
+          aria-label="back"
+          onClick={close}
+          className="text-slate-50 absolute top-0 right-0 mt-auto mr-auto"
+        >
+          <CloseIcon fontSize="large" />
+        </IconButton>
       </div>
       <div className="w-full flex flex-col lg:flex-row p-3">
         <div className="w-10/12 lg:w-1/2 mx-auto lg:p-5">
