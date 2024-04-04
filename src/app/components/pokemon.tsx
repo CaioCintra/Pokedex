@@ -48,7 +48,7 @@ export default function Pokemon(pokemonProp: any) {
   return (
     <>
       <div
-        className="bg-slate-100 rounded-2xl p-2 m-5 w-52 h-52 shadow-md flex flex-col justify-center items-center"
+        className="bg-slate-100 rounded-2xl p-2 m-5 w-52 h-52 shadow-md flex flex-col justify-center items-center hover:scale-110 cursor-pointer duration-300"
         onClick={handleOpen}
       >
         <div className="flex justify-evenly w-11/12">
@@ -82,7 +82,7 @@ export default function Pokemon(pokemonProp: any) {
         className="flex justify-center items-center h-full"
       >
         <Profile
-          info={pokemon}
+          pokemon={pokemon}
           name={formatPokemonName(pokemon.name)}
           id={formatPokemonId(pokemon.id)}
         />
