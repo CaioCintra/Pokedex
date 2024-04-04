@@ -85,6 +85,7 @@ export default function Pokemon(pokemonProp: any) {
           pokemon={pokemon}
           name={formatPokemonName(pokemon.name)}
           id={formatPokemonId(pokemon.id)}
+          close={handleClose}
         />
       </Modal>
     </>
